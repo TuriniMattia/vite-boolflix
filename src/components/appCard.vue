@@ -3,8 +3,19 @@
         <div class="card-body">
             <p>{{ item.title }}</p>
             <p>{{ item.original_title }}</p>
-            <p>{{ item.original_language }}</p>
+
+            <img :src="item.flag">
             <p>{{ item.vote_average }}</p>
+            <p>{{ item.rating }}</p>
+
+
+            <font-awesome-icon v-for="n in 5" :icon="[n <= item.rating ? 'fas' : 'far', 'star']" />
+
+            <!-- <font-awesome-icon :icon="['far', 'star']" /> -->
+
+            <div>
+                <img :src="item.poster" alt="" />
+            </div>
         </div>
 
 
