@@ -6,8 +6,9 @@
             </div>
             <div class="container">
                 <ul>
-                    <li>Titolo del film</li>
+                    <card v-for="movie in store.movies" :key="movie.id" :item="movie" />
                 </ul>
+
             </div>
 
         </section>
@@ -17,7 +18,7 @@
             </div>
             <div class="container">
                 <ul>
-                    <li>Titolo della serie</li>
+                    <card v-for="serie in store.series" :key="serie.id" :item="serie" />
                 </ul>
             </div>
 
@@ -26,9 +27,21 @@
 </template>
 
 <script>
-export default {
+import card from './appCard.vue';
 
+import { store } from '../store.js';
+
+export default {
+    components: {
+        card,
+    },
+    data() {
+        return {
+            store: store
+        }
+    }
 }
+
 </script>
 
 <style lang="scss" scoped></style>

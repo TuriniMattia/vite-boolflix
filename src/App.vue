@@ -10,7 +10,7 @@ import appMain from '/src/components/appMain.vue';
 export default {
   components: {
     appHeader,
-    appMain
+    appMain,
   }
 }
 </script>
