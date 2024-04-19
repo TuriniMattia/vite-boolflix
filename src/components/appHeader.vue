@@ -1,9 +1,20 @@
 <template>
-    <header>
-        <div class="container">
-            <input type="text" v-model="query" placeholder="Scrivi il titolo che cerchi">
-            <button @click="getAll">Scrivi il titolo che cerchi</button>
+    <header class="header bg-black">
+        <div class="container bg-black">
+            <div class="row bg-black ">
+                <img class="logo bg-black" src="/public/logo.png" alt="">
+                <div class="search-tab bg-black">
+                    <input class="search-bar" type="text" v-model="query" placeholder="Scrivi il titolo che cerchi"
+                        @keyup.enter="getAll">
+                    <button class="search-btn" @click="getAll">cerca</button>
+                </div>
+
+            </div>
+
         </div>
+
+
+
     </header>
 </template>
 
@@ -89,4 +100,40 @@ function getFlag(item) {
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.bg-black {
+    background-color: black;
+}
+
+
+.logo {
+    cursor: pointer;
+}
+
+
+
+
+.search-bar {
+    height: 30px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.search-btn {
+    height: 30px;
+    width: 50px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.search-tab {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+</style>

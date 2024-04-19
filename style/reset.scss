@@ -2,9 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgb(67, 67, 67);
+    
+}
+ul,ul,menu{
+    list-style: none;
 }
 
 .container{
-    margin: 0, auto;
-    max-width: 1024px;
+    margin: auto;
+    width: 80%;
+    padding: 10px;
 }

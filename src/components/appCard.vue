@@ -3,9 +3,7 @@
         <div class="card-body">
             <p>{{ item.title }}</p>
             <p>{{ item.original_title }}</p>
-
             <img :src="item.flag">
-            <p>{{ item.vote_average }}</p>
             <p>{{ item.rating }}</p>
 
 

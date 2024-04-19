@@ -1,10 +1,10 @@
 <template>
     <main>
-        <section class="movie-section">
+        <section class="movie-section ">
             <div class="container">
                 <h2>Film</h2>
             </div>
-            <div class="container">
+            <div class="container flex">
                 <ul>
                     <card v-for="movie in store.movies" :key="movie.id" :item="movie" />
                 </ul>
@@ -16,7 +16,7 @@
             <div class="container">
                 <h2>Serie TV</h2>
             </div>
-            <div class="container">
+            <div class="container flex">
                 <ul>
                     <card v-for="serie in store.series" :key="serie.id" :item="serie" />
                 </ul>
@@ -44,4 +44,4 @@ export default {
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss"></style>
